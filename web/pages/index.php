@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr-ca">
-<!--HEAD import from parts-->
-<?php require ('../parts/part.head.php'); ?>
+<head>
+    <!--HEAD import from parts-->
+    <?php include ('../parts/part.head.php'); ?>
+</head>
 
 <body>
-<!--HEADER import from parts-->
-<?php include ('../parts/part.header.php'); ?>
+<header>
+    <!--HEADER import from parts-->
+    <?php include ('../parts/part.header.php'); ?>
+</header>
 
-<!--CAROUSEL import from parts-->
-<div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
+<main>
 
-    <div class="carousel-item red white-text" href="#one!">
-        <h2>First Panel</h2>
-        <p class="white-text">This is your first panel</p>
-    </div>
+</main>
 
-    <div class="carousel-item amber white-text" href="#two!">
-        <h2>Second Panel</h2>
-        <p class="white-text">This is your second panel</p>
-    </div>
-
-    <div class="carousel-item green white-text" href="#three!">
-        <h2>Third Panel</h2>
-        <p class="white-text">This is your third panel</p>
-    </div>
-
-    <div class="carousel-item blue white-text" href="#four!">
-        <h2>Fourth Panel</h2>
-        <p class="white-text">This is your fourth panel</p>
-    </div>
-</div>
-
-<!--SPACING import from parts-->
-<?php include ('../parts/spacing_page.php'); ?>
-
-<!--FOOTER import from parts-->
-<?php include ('../parts/part.footer.php'); ?>
-</body>
+<footer>
+    <!--FOOTER import from parts-->
+    <?php include ('../parts/part.footer.php'); ?>
+</footer>
 
 <!--FOOT import from parts-->
-<?php require ('../parts/part.foot.php'); ?>
+<?php include ('../parts/part.foot.php'); ?>
+</body>
 </html>
