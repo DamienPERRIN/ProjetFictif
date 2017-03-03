@@ -1,16 +1,42 @@
-<header class="red darken-1">
-    <div class="container">
-        <nav>
-            <div class="nav-wrapper red darken-1">
-                <a href="#" class="brand-logo">Restaurant atypique</a>
+<section>
+    <div class="tabs tabs-style-iconbox">
+        <div class="row">
+            <div class="col-xs-3">
 
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="index.php">Acceuil</a></li>
-                    <li><a href="#">Nos restaurants</a></li>
-                    <li><a href="#">Qui sommes nous ?</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
             </div>
+
+            <div class="col-xs-6">
+                <h1 class="text-center">Restaurants Atypiques</h1>
+            </div>
+
+            <div class="col-xs-3">
+
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#acceuil" class="icon icon-home"><span>Acceuil</span></a></li>
+                <li><a href="#restaurant" class="icon icon-coffee"><span>Nos restaurants</span></a></li>
+                <li><a href="#nous-rejoindre" class="icon icon-upload"><span>Nous rejoindre ?</span></a></li>
+                <li><a href="#qui-sommes-nous" class="icon icon-gift"><span>Qui sommes nous ?</span></a></li>
+            </ul>
         </nav>
-    </div>
-</header>
+        <div class="content-wrap">
+            <section id="acceuil">
+                <p>1</p>
+            </section>
+
+            <section id="restaurant">
+                <?php include ('page.resto.php'); ?>
+            </section>
+
+            <section id="nous-rejoindre">
+                <p>3</p>
+            </section>
+
+            <section id="qui-sommes-nous">
+                <p>4</p>
+            </section>
+        </div><!-- /content -->
+    </div><!-- /tabs -->
+</section>
