@@ -2,13 +2,13 @@
 <html lang="fr-ca">
 <head>
     <!--HEAD import from parts-->
-    <?php include ('../parts/part.head.php'); ?>
+    <?php include('../parts/part.head.php'); ?>
 </head>
 
 <body>
 <header>
     <!--HEADER import from parts-->
-    <?php include ('../parts/part.header.php'); ?>
+    <?php include('../parts/part.header.php'); ?>
 </header>
 
 <main>
@@ -17,10 +17,10 @@
 
 <footer>
     <!--FOOTER import from parts-->
-    <?php include ('../parts/part.footer.php'); ?>
+    <?php include('../parts/part.footer.php'); ?>
 </footer>
 
 <!--FOOT import from parts-->
-<?php include ('../parts/part.foot.php'); ?>
+<?php include('../parts/part.foot.php'); ?>
 </body>
 </html>

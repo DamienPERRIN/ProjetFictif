@@ -30,12 +30,12 @@ body {
     background: #e7ecea;
     color: #74777b;
     font-family: 'Raleway', Arial, sans-serif;
+    min-width: 390px;
 }
-
 header .tabs-style-iconbox {
     color: #74777b;
     font-weight: 400;
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-family: 'Raleway', Arial, sans-serif;
 }
 
@@ -50,10 +50,43 @@ a {
     outline: none;
 }
 
+p {
+    font-size: 2em;
+}
+
 a:hover, a:focus {
     color: #FF4148;
 }
+/* ----- PAGE CONTENT ----- */
+.spacer-header {
+    margin-top: 3%;
+}
+.be-red {
+    color: #FF4148;
+}
+/* ----- FORM ----- */
+input[type="submit"] {
+    background: #FF4148;
+    border: 1px solid #391515;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%!important;
+}
+textarea {
+    resize: none;
+}
+.brd-all {
+    border: 2px solid #74777B;
+    border-radius: 3px;
+    font-size: 1.75em!important;
+    margin-bottom: 5%;
+}
 
+/* ----- OTHERS ----- */
 .support {
     display: none;
     color: #ef5189;
