@@ -3,6 +3,16 @@
 /*****************************/
 /* Bar */
 /*****************************/
+fieldset {
+	margin:0;
+	padding:0
+}
+fieldset {
+	border-width: 0
+} /* barre de recherche*/
+
+.fa-twitter:before{content:"\f099"}
+.fa-facebook:before{content:"\f09a"}
 
 .tabs-style-bar nav {
 	background: rgba(40,44,42,0.05);

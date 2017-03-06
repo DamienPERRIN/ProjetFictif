@@ -7,7 +7,7 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="pragma" content="no-cache">
 
-<title></title>
+<title>Les Restaurants Atypiques</title>
 
 <!--Import bootstrap.css-->
 <link type="text/css" rel="stylesheet" href="../../web/css/bootstrap.css" />

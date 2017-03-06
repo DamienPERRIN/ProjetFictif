@@ -1,22 +1,3 @@
-.image {
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    border-collapse: collapse;
-}
-.image:hover p.text {
-    opacity: 1;
-}
-.image .text {
-    color: #FFF;
-    height : 300px;
-    width : 400px;
-    background: rgba(0, 0, 0, 0.3); /*fond noir*/
-    margin: 0 auto;
-    top: 0;
-    opacity: 0;
-    position: absolute;
-}
-.text {
-    font-size: 1em!important;
+div p{
+    font-size: small;
 }
