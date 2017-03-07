@@ -1,7 +1,7 @@
 <div id="header" class="container navbar navbar-default sb-slide affix-top" role="banner">
     <div class="navbar-header">
         <div id="bloc_page">
-            <img src="../img/logo.pdf" href="#L'univers-Atypique" alt="Logo" id="logo"/>
+            <img src="img/logo.png" href="#L'univers-Atypique" alt="Logo" id="logo"/>
         </div>
 
         <a href="/" class="navbar-brand"><img src="" alt="" width="225" height="65"></a>
@@ -22,7 +22,7 @@
             <li class="">
                 <a href="?page=contact" class="<?php if(isset($_GET['page']) AND $_GET['page']==='contact'){echo ('active-link');} ?>">Contact</a>
             </li>
-            <li class=" active">
+            <li class="active">
                 <a href="?page=devenir-franchise" class="<?php if(isset($_GET['page']) AND $_GET['page']==='devenir-franchise'){echo ('active-link');} ?>">Devenir franchisé ?</a>
             </li>
         </ul>

@@ -8,6 +8,7 @@
 <link rel="icon" type="image/png" href="http://socktail.com/images/logo/g7719.png" />
 
 <!--Import myCSS-->
+<link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/more.css" />
 <link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/mediaquery.css" />
 <link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/main.css" />
 
