@@ -1,9 +1,13 @@
-<?php                                       echo 'test1';
-    require('src/log.bdd.php');          echo 'test2';
+<?php
+    require('src/log.bdd.php');
 
-    $sql    = "SELECT * FROM restaurant";   echo 'test3';
-    $mysqli = getConnection();              echo 'test4';
-    $data   = execSql($mysqli, $sql);       echo 'test5';
+    $mysqli = getConnection();
+
+    $sql    = "SELECT * FROM restaurant";
+    $data  = execSql($mysqli, $sql);
+
+    $sql    = "SELECT * FROM avis";
+    $data1  = execSql($mysqli, $sql);
 ?>
 
 <div id="restaurants" class="container">
@@ -18,14 +22,22 @@
                         <img src="<?php echo ($path_to_site)?>/img/restaurants/restaurant<?php echo $record['id'] . ".jpeg"; ?>"
                              alt="Photo du restaurant <?php echo $record['titre']; ?>">
 
-                            <div class="caption">
-                                <h3><?php echo $record['titre']; ?></h3>
-                                <p><?php echo $record['texte']; ?></p>
-                            <p><a id="pop-<?php echo $record['id']; ?>" class="btn btn-default popup-trigger">En savoir plus</a></p>
+                        <div class="caption">
+                            <h3><?php echo $record['titre']; ?></h3>
+                            <p><?php echo $record['texte']; ?></p>
+                            <p><a href="" data-width="500" data-rel="popup<?php echo $record['id']; ?>" class="btn btn-default popup-trigger poplight">En savoir plus</a></p>
+                        </div>
+                    </div>
+
+                    <div id="popup<?php echo $record['id']; ?>" class="popup_block">
+                        <h3><?php echo $record['titre']; ?></h3>
+                        <div class="popup-img">
+                            <img src="<?php echo ($path_to_site)?>/img/restaurants/restaurant<?php echo $record['id'] . ".jpeg"; ?>"
+                                 alt="Photo du restaurant <?php echo $record['titre']; ?>">
+                            <p><?php echo $record['texte']; ?></p>
                         </div>
                     </div>
                 </div> <!--end block-->
             <?php endforeach; ?>
-
     </div>
 </div>

@@ -39,6 +39,9 @@ body,
 .container-fluid {
     width: 100%!important;
 }
+body {
+    background-color: #9193b9!important;
+}
 
 /* ---------- HEADER ---------- */
 #my-header-nav ul li a:hover,
@@ -56,10 +59,54 @@ body,
 footer {
     margin: 0;
     padding: 0;
-    background-color: rgb(199, 74, 79);;
+    background-color: rgb(199, 74, 79);
+    color: #fff;
+}
+footer ul {
+    list-style-type: none;
+}
+footer h3, footer a, footer p, footer a {
+    color: rgb(255, 255, 255);
 }
 footer h3 {
-    color: rgb(255, 255, 255);;
+    margin-bottom: 1.2em;
+}
+footer a:hover {
+    color: #fff;
+}
+#social-container .container-fluid {
+    display: flex;
+    width: 330px!important;
+    margin: 0 auto;
+}
+#social-container img {
+    width: 80px;
+    height: 80px;
+    margin: 0.7em;
+    opacity: 0.9;
+}
+#social-container a {
+    transition: all .2s ease-in-out;
+}
+#social-container a:hover > img {
+    transform: rotate(10deg);
+    opacity: 1;
+}
+#info-container {
+    width: 98%;
+    margin: 0 auto;
+}
+#info-container ul {
+    padding-left: 20%;
+}
+#info-container label {
+    width: 120px;
+}
+#nav-container {
+    margin-left: 5em;
+}
+.section-copyright {
+    text-align: center;
 }
 
 /* ---------- FORM ---------- */
@@ -115,87 +162,61 @@ legend {
 }
 
 /* ---------- POPUP ---------- */
-.main {
-    margin: 0 auto;
-    padding: 40px 20px;
-    max-width: 960px;
-    font-size: 19px;
-    line-height: 30px;
-}
-.main a {
-    color: #DB7580;
-    text-transform: none;
-}
-.popup-trigger {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 260px;
-    background: #bd1217;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 24px;
-    cursor: pointer;
-}
-.popup {
-    display: none;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    width: 700px;
-    margin-left: -350px;
-    padding: 50px 30px;
-    background: #fff;
-    color: #333;
-    font-size: 19px;
-    line-height: 30px;
-    border: 10px solid #4e4e4e;
-    z-index: 9999;
-    overflow: hidden;
-}
-.popup img {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin: 1.5em auto;
-}
-.popup p, .popup a {
-    color: #1b1b1b!important;
-}
-.popup h3 {
-    color: #fff;
-    font-size: 2em;
-    padding-left: 1em;
-    margin: 0 0 1em 2.7em;
-    border-left: 4px solid #ffffff;
-}
-.popup-mobile {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 30px 0 0;
-    width: 100%;
-}
-.popup-btn-close {
-    position: absolute;
-    top: 8px; right: 14px;
-    color: #fbffff;
-    font-size: 1.75em;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+
 .close-popup {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    height: 500px;
-    background-color: rgb(199, 74, 79);
+    color: rgb(199, 13, 30);
+    font-size: 1.5em;
 }
 
-/* ---------- MORE ---------- */
+#fade { /*--Masque opaque noir de fond--*/
+    display: none; /*--masqué par défaut--*/
+    background: #000;
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    opacity: .80;
+    z-index: 9999;
+}
+.popup_block{
+    display: none; /*--masqué par défaut--*/
+    background: #fff;
+    padding: 20px;
+    border: 20px solid rgb(199, 74, 79);
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 99999;
+    /*--Les différentes définitions de Box Shadow en CSS3--*/
+    -webkit-box-shadow: 0px 0px 20px #000;
+    -moz-box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 20px #000;
+    /*--Coins arrondis en CSS3--*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+img.btn_close {
+    float: right;
+    margin: -55px -55px 0 0;
+}
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+.popup-img {
+    width: 90%;
+    margin: 0 auto;
+}
+.popup_block h3, .popup_block p {
+    color: #1b1b1b!important;
+}
+.popup_block h3 {
+    font-size: 2em;
+    margin-left: 1em;
+}
+.popup-img img {
+    width: 100%;
+    margin: 0.8em 0 0.8em 0;
+}
