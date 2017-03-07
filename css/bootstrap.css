@@ -1086,6 +1086,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
+  background-color: #fff;
 }
 input,
 button,
@@ -1102,7 +1103,7 @@ a {
 a:hover,
 a:focus {
   color: #23527c;
-  text-decoration: none;/* mod */
+  text-decoration: underline;
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -2564,7 +2565,7 @@ output {
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #1b1b1b;
+  border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
@@ -4003,7 +4004,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eee;
-  border-color: #1b1b1b; /* switch-color */
+  border-color: #337ab7;
 }
 .nav .nav-divider {
   height: 1px;
@@ -5303,8 +5304,8 @@ button.list-group-item {
 .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #1b1b1b; /* switch-color */
-  border-color: #1b1b1b;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -6440,8 +6441,7 @@ button.close {
     margin-top: -10px;
     font-size: 30px;
   }
-  .carousel-control .
-  glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
     margin-left: -10px;
   }
