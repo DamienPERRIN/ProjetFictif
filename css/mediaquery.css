@@ -1,0 +1,44 @@
+@media (max-width: 577px) {
+    #my-menu-2 {
+        margin-top: 1.5em;
+    }
+    #my-header-nav ul li a, #my-header-nav ul li a span {
+        min-width: 60px!important;
+    }
+    #restaurants h2 {
+        padding-bottom: 0.5em;
+    }
+    #my-header {
+        width: 100%!important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 769px) {
+    #my-menu-2 {
+        margin-top: 1.5em;
+    }
+    #my-header-nav ul li a, #my-header-nav ul li a span {
+        min-width: 60px!important;
+    }
+    #restaurants h2 {
+        margin-bottom: 0.5em;
+    }
+    #my-header {
+        width: 100%!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #my-menu-2 {
+        margin-top: 2em;
+    }
+    #my-header-nav ul li a, #my-header-nav ul li a span {
+        min-width: 60px!important;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
