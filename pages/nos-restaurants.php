@@ -6,6 +6,7 @@
     $sql    = "SELECT * FROM restaurant";
     $data   = execSql($mysqli, $sql);
 ?>
+
 <div id="restaurants" class="container">
     <div class="row">
         <div class="col-sm-10 col-md-10">
@@ -35,5 +36,6 @@
                     </div>
                 </div> <!--end block-->
             <?php endforeach; ?>
+
     </div>
 </div>

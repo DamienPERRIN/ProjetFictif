@@ -9,7 +9,6 @@
                 <p><label>Fax</label>744.255.444</p>
                 <p><label>Adresse</label>75 rue St Jean 69001 LYON</p>
             </div>
-        </div>
 
         <div id="social-container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <h3 class="text-center">Rester connecté</h3>
