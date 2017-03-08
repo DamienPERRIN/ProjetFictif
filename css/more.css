@@ -7,9 +7,16 @@
 }
 #bloc_page {
     width: 20%;
-    height: 40px;
-    float: left;
+    display: inline-block;
 }
 #bloc_page img{
     width:100%;
+    min-height: 100px;
+    min-width: 125px;
+    float: left;
+
+}
+h1{
+    color: #c74a4f!important;
+    font-family: 'rubikbold';
 }

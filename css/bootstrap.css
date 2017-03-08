@@ -3518,7 +3518,7 @@ tbody.collapse.in {
   outline: 0;
 }
 .dropdown-menu {
-  position: absolute;
+  position:; /*modification dropdown*/
   top: 100%;
   left: 0;
   z-index: 1000;
@@ -3527,13 +3527,12 @@ tbody.collapse.in {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 22px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background: #2d434e;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
@@ -3972,7 +3971,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
-  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
@@ -4354,7 +4352,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 0;
   }
   .navbar-nav > li {
     float: left;
