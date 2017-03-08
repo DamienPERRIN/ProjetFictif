@@ -1,9 +1,13 @@
-<?php                                       echo 'test1';
-    require('src/log.bdd.php');          echo 'test2';
+<?php
+    require('src/log.bdd.php');
 
-    $sql    = "SELECT * FROM restaurant";   echo 'test3';
-    $mysqli = getConnection();              echo 'test4';
-    $data   = execSql($mysqli, $sql);       echo 'test5';
+    $mysqli = getConnection();
+
+    $sql    = "SELECT * FROM restaurant";
+    $data  = execSql($mysqli, $sql);
+
+    $sql    = "SELECT * FROM avis";
+    $data1  = execSql($mysqli, $sql);
 ?>
 
 <div id="restaurants" class="container">

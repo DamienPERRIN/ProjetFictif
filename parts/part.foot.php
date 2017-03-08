@@ -13,3 +13,9 @@
     });
 </script>
 
+<!--Import dropdown-->
+<script type="text/javascript">
+    $('#myDropdown').on('show.bs.dropdown', function () {
+    $('.dropdown-toggle').dropdown()
+})</script>
+

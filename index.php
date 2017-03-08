@@ -5,6 +5,7 @@
     if ( $page === 'qui-sommes-nous'
     OR $page === 'devenir-franchise'
     OR $page === 'contact'
+    OR $page === 'proprietaire'
     OR $page === 'nos-restaurants') {
         $page = $page . '.php';
     } else {
