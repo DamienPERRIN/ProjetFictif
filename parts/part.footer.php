@@ -1,15 +1,13 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-1">
-            <div id="nav-container">
-                <h3 class="text-center">Plan du site</h3>
-                <ul>
-                    <li><a href="?page=index">Accueil</a></li>
-                    <li><a href="?page=univers-atypique">L'univers Atypique</a></li>
-                    <li><a href="?page=nos-restaurants">Nos restaurants</a></li>
-                    <li><a href="?page=contact">Contact</a></li>
-                    <li><a href="?page=devenir-franchise">Devenir franchisé</a></li>
-                </ul>
+        <div id="info-container" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-1">
+
+            <div id="info-block">
+                <h3>Nos informations</h3>
+                <p><label>Email</label>lesrestaurants@atypique.fr</p>
+                <p><label>Téléphone</label>04.75.71.45.85</p>
+                <p><label>Fax</label>744.255.444</p>
+                <p><label>Adresse</label>75 rue St Jean 69001 LYON</p>
             </div>
         </div>
 
@@ -23,28 +21,30 @@
             </div>
         </div>
 
-        <div id="info-container" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <h3>Nos informations</h3>
-            <ul>
-                <li><label>Email</label>lesrestaurants@atypique.fr</li>
-                <li><label>Téléphone</label>04.75.71.45.85</li>
-                <li><label>Fax</label>744.255.444</li>
-                <li><label>Adresse</label>75 rue St Jean 69001 LYON</li>
+        <div id="nav-container" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <ul class="nav">
+                <li><h3>Plan du site</h3></li>
+                <li><a href="?page=index">Accueil</a></li>
+                <li><a href="?page=univers-atypique">L'univers Atypique</a></li>
+                <li><a href="?page=nos-restaurants">Nos restaurants</a></li>
+                <li><a href="?page=contact">Contact</a></li>
+                <li><a href="?page=devenir-franchise">Devenir franchisé</a></li>
             </ul>
         </div>
+
     </div><!--end top foot-->
 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-13">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <section class="section section-copyright">
-                <p>© 2017 Les restaurants Atypiques -
-                    <a href="?page=conditions-utilisation">
-                        Conditions générales d’utilisation
-                    </a>
+                <p>
+                    © 2017 Les restaurants Atypiques -
+                    <a href="?page=conditions-utilisation">Conditions générales d’utilisation</a>
                 </p>
 
-                <p>Pour votre santé, pratiquez une activité physique
-                    régulière <a href="http://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a>
+                <p>
+                    Pour votre santé, pratiquez une activité physique régulière
+                    <a href="http://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a>
                 </p>
             </section>
         </div>

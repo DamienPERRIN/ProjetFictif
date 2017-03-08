@@ -37,7 +37,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1201px) {
 }
 
 @media (min-width: 1200px) {

@@ -3983,12 +3983,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 3px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
-  background-color: #eee;
+  background-color: transparent;/*mod perso*/
+  text-decoration: underline;
 }
 .nav > li.disabled > a {
   color: #777;

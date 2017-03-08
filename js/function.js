@@ -3,7 +3,7 @@ $(document).ready(function() {
         // On poplight click
         $('a.poplight').on('click', function() {
             var popID = $(this).data('rel');
-            var popWidth = $(this).data('width')+200; // get width
+            var popWidth = $(this).data('width'); // get width
 
             // Get windows
             $('#' + popID).fadeIn().css({ 'width': popWidth})

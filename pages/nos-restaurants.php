@@ -4,12 +4,8 @@
     $mysqli = getConnection();
 
     $sql    = "SELECT * FROM restaurant";
-    $data  = execSql($mysqli, $sql);
-
-    $sql    = "SELECT * FROM avis";
-    $data1  = execSql($mysqli, $sql);
+    $data   = execSql($mysqli, $sql);
 ?>
-
 <div id="restaurants" class="container">
     <div class="row">
         <div class="col-sm-10 col-md-10">
