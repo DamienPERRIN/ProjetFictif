@@ -25,7 +25,7 @@
                 <a href="?page=index">Accueil</a>
                 <a href="?page=univers-atypique">L'univers Atypique</a>
                 <a href="?page=nos-restaurants">Nos restaurants</a>
-                <a href="?page=contact">Contact</a>
+                <a href="?page=recrutement">Recrutement</a>
                 <a href="?page=devenir-franchise">Devenir franchisé</a>
         </div>
 

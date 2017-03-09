@@ -12,6 +12,10 @@
 .col-xs-8 .col-sm-8 .col-md-8 .col-lg-8 h1{
     width: 70% !important;
 }
+.text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 #bloc_page {
     width: 20%;
     display: inline-block;
