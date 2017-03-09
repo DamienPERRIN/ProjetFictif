@@ -35,10 +35,6 @@
   position: relative;
 }
 .unslider-fade .unslider-wrap li {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
   z-index: 8;
 }
 .unslider-fade .unslider-wrap li.unslider-active {
@@ -64,7 +60,6 @@
   left: auto;
   right: 20px;
 }
-
 .unslider-nav ol {
   list-style: none;
   text-align: center;

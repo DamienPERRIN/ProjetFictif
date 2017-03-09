@@ -3,7 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Restaurants Atypiques</title>
 <link rel="icon" type="image/png" href="http://socktail.com/images/logo/g7719.png" />
-<link type="text/css" rel="stylesheet" href="css/more.css" />
 <link type="text/css" rel="stylesheet" href="css/mediaquery.css" />
 <link type="text/css" rel="stylesheet" href="css/main.css" />
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
