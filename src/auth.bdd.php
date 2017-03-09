@@ -1,6 +1,6 @@
 <?php
 
 define("USER",      "root");
-define("PASSWORD",  "jecode4wcs");
+define("PASSWORD",  "root");
 define("HOST",      "localhost");
 define("DB",        "projet_fictif");
