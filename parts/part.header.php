@@ -4,7 +4,6 @@
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <div id="bloc_page">
                     <img src="img/cerf.png" href="#L'univers-Atypique" alt="Logo" id="logo"/>
-
                 </div>
             </div>
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
@@ -14,33 +13,36 @@
         <div class="row hidden-xs hidden-sm ">
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <ul class="navbar-nav nav">
-
                     <li class="">
-                        <a href="?page=index" class="<?php if(isset($_GET['page']) AND $_GET['page']==='index'){echo ('active-link');} ?>">L'univers Atypique</a>
+                        <a href="?page=index" class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'index') {
+                            echo('active-link');
+                        } ?>">L'univers Atypique</a>
                     </li>
                     <li class="">
-                        <a href="?page=nos-restaurants" class="<?php if(isset($_GET['page']) AND $_GET['page']==='nos-restaurants'){echo ('active-link');} ?>">Nos restaurants</a>
+                        <a href="?page=nos-restaurants"
+                           class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'nos-restaurants') {
+                               echo('active-link');
+                           } ?>">Nos restaurants</a>
                     </li>
                     <li class="">
-                        <a href="?page=recrutement" class="<?php if(isset($_GET['page']) AND $_GET['page']==='recrutement'){echo ('active-link');} ?>">Recrutement</a>
+                        <a href="?page=recrutement"
+                           class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'recrutement') {
+                               echo('active-link');
+                           } ?>">Recrutement</a>
                     </li>
                 </ul>
             </div>
-                <div class="active col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <a href="?page=devenir-franchise" class="<?php if(isset($_GET['page']) AND $_GET['page']==='devenir-franchise'){echo ('active-link');} ?>">Devenir franchisé ?</a>
-                </div>
+            <div class="active col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <a href="?page=devenir-franchise"
+                   class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
+                       echo('active-link');
+                   } ?>">Devenir franchisé ?</a>
+            </div>
         </div>
-
-        <!--<a href="/" class="navbar-brand"><img src="" alt="" width="225" height="65"></a>
-
-        <div class="navbar-account">
-            <a href="">Inscrivez-vous à la newsletter</a>
-        </div>-->
     </div>
-
-
     <div class="dropdown hidden-md hidden-lg dropdown-menu-right">
-        <button id="dLabel" class="navbar-text navbar-right c-hamburger c-hamburger--htx" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" class="navbar-text navbar-right c-hamburger c-hamburger--htx" type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span>toggle menu</span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dLabel">
@@ -48,20 +50,30 @@
             <ul class="navbar-nav nav">
 
                 <li class="">
-                    <a href="?page=index" class="<?php if(isset($_GET['page']) AND $_GET['page']==='index'){echo ('active-link');} ?>">L'univers Atypique</a>
+                    <a href="?page=index" class="<?php if (!isset($_GET['page']) OR $_GET['page'] === 'index') {
+                        echo('active-link');
+                    } ?>">L'univers Atypique</a>
                 </li>
                 <li class="">
-                    <a href="?page=nos-restaurants" class="<?php if(isset($_GET['page']) AND $_GET['page']==='nos-restaurants'){echo ('active-link');} ?>">Nos restaurants</a>
+                    <a href="?page=nos-restaurants"
+                       class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'nos-restaurants') {
+                           echo('active-link');
+                       } ?>">Nos restaurants</a>
                 </li>
                 <li class="">
-                    <a href="?page=recrutement" class="<?php if(isset($_GET['page']) AND $_GET['page']==='recrutement'){echo ('active-link');} ?>">Recrutement</a>
+                    <a href="?page=recrutement"
+                       class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'recrutement') {
+                           echo('active-link');
+                       } ?>">Recrutement</a>
                 </li>
             </ul>
         </ul>
-
         <div class="active col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <a href="?page=devenir-franchise" class="<?php if(isset($_GET['page']) AND $_GET['page']==='devenir-franchise'){echo ('active-link');} ?>">Devenir franchisé ?</a>
+            <a href="?page=devenir-franchise"
+               class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
+                   echo('active-link');
+               } ?>">Devenir franchisé ?</a>
         </div>
-    </div><!-- end navbar -->
-</div> <!-- end container -->
+    </div>
+</div>
 

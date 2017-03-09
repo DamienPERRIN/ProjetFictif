@@ -3,7 +3,7 @@
 
     $mysqli = getConnection();
 
-    $sql    = "SELECT * FROM restaurant INNER JOIN horaire";
+    $sql    = "SELECT * FROM restaurant r INNER JOIN horaire h ON r.id = h.id";
     $data   = execSql($mysqli, $sql);
 ?>
 
@@ -23,33 +23,37 @@
                     <div class="caption">
                         <h3><?php echo $record['titre']; ?></h3>
                         <p><?php echo $record['texte']; ?></p>
-                        <p><a id="animateModal-<?php echo $record['id']; ?>" href="#modal-<?php echo $record['id']; ?>">DEMO02</a></p>
+                        <p><a id="animateModal-<?php echo $record['id']; ?>" href="#modal-<?php echo $record['id']; ?>" class="myModal">En savoir plus</a></p>
                     </div>
                 </div>
 
                 <div id="modal-<?php echo $record['id']; ?>">
                     <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-                    <div  id="btn-close-modal" class="close-modal-<?php echo $record['id']; ?>">
-                        CLOSE
+                    <div id="btn-close-modal" class="my-closing-btn close-modal-<?php echo $record['id']; ?>">
+                        <p>FERMER</p>
                     </div>
 
-                    <div class="modal-content">e
+                    <div class="modal-content">
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-2">
-                            <h3>Information</h3>
+                            <h3 class="text-center">Informations</h3>
                             <ul>
-                                <li><label>Adresse</label></li>
-                                <li><label>Téléphone</label></li>
-                                <li><label>Email</label></li>
+                                <li><label><span class="glyphicon glyphicon-asterisk"></span> Adresse</label><?php echo $record['adresse']; ?></li>
+                                <li><label class="brd-top"><span class="glyphicon glyphicon-asterisk"></span> Téléphone</label><?php echo $record['telephone']; ?></li>
+                                <li><label class="brd-top"><span class="glyphicon glyphicon-asterisk"></span>   Email</label><?php echo $record['email']; ?></li>
                             </ul>
                         </div>
 
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <h3>Horaires</h3>
+                            <h3 class="text-center">Horaires</h3>
                             <table class="table">
                                 <tbody>
-                                <tr>
-                                    <td>Lundi</td><td><?php echo $record['lundi']; ?></td>
-                                </tr>
+                                <tr><td>Lundi</td><td><?php echo $record['lundi']; ?></td></tr>
+                                <tr><td>Mardi</td><td><?php echo $record['mardi']; ?></td></tr>
+                                <tr><td>Mercredi</td><td><?php echo $record['mercredi']; ?></td></tr>
+                                <tr><td>Jeudi</td><td><?php echo $record['jeudi']; ?></td></tr>
+                                <tr><td>Vendredi</td><td><?php echo $record['vendredi']; ?></td></tr>
+                                <tr><td>Samedi</td><td><?php echo $record['samedi']; ?></td></tr>
+                                <tr><td>Dimanche</td><td><?php echo $record['dimanche']; ?></td></tr>
                                 </tbody>
                             </table>
                         </div>

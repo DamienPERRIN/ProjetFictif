@@ -4,7 +4,7 @@
  */
 function getConnection()
 {
-    require ('src/auth.bdd.php');
+    require('src/auth.bdd.php');
 
     $mysqli = new mysqli(HOST, USER, PASSWORD, DB);
 
@@ -22,7 +22,7 @@ function getConnection()
  */
 function execSql($mysqli, $sql)
 {
-    if (!$result = $mysqli->query($sql)){
+    if (!$result = $mysqli->query($sql)) {
         echo "Failled to run query : (" . $mysqli->errno . ") " . $mysqli->error;
         die();
     }

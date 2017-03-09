@@ -21,7 +21,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 /* ---------- GENERAL ---------- */
 html,
 body,
@@ -29,10 +28,8 @@ body,
     width: 100%!important;
 }
 body{
-    background: url("http://celb.lu/wp-content/uploads/2014/04/Gray-plain-website-background.jpg") fixed center;
-
+    background: url("http://celb.lu/wp-content/uploads/2014/04/Gray-plain-website-background.jpg") center;
 }
-
 /* ---------- HEADER ---------- */
 #my-header-nav ul li a:hover,
 #my-header-nav ul li a:focus,
@@ -40,11 +37,9 @@ body{
 #my-header-nav ul li a:hover > span {
     color: #fff;
 }
-
 .active-link {
     background-color:  #c74a4f!important;
 }
-
 /* ---------- FOOTER ---------- */
 footer {
     margin: 2em 0 0 0;
@@ -97,7 +92,7 @@ footer a:hover {
     padding-left: 20%;
 }
 #info-container label {
-    width: 100px;
+    width: 100%;
 }
 #info-block {
     width: 275px;
@@ -116,8 +111,6 @@ footer .section-copyright {
     border-top: 2px solid #cecece;
     padding: 1em;
 }
-
-
 /* ---------- FORM ---------- */
 form {
     font-family: rubikregular, sans-serif;
@@ -140,7 +133,6 @@ form input[type='submit']:hover {
 legend {
     color: #fff!important;
 }
-
 /* ---------- SLIDER ---------- */
 .automatic-slider {
     position: absolute;
@@ -150,7 +142,6 @@ legend {
 .automatic-slider img {
     width: 100%;
 }
-
 /* ---------- #restaurants ---------- */
 #restaurants {
     margin-top: 2em;
@@ -177,17 +168,56 @@ legend {
 #restaurants table {
     font-size: 0.8em;
 }
-
+#restaurants caption h3 {
+    font-size: 2em;
+    text-decoration: underline!important;
+}
+/* ---------- MORE ---------- */
 #btn-close-modal {
     width:100%;
     text-align: center;
     cursor:pointer;
     color:#fff;
 }
-
-/* ---------- MORE ---------- */
-
-#restaurants caption h3 {
-    font-size: 2em;
-    text-decoration: underline!important;
+.myModal {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.myModal:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+.modal-content {
+    background-color: transparent!important;
+    height: 100%;
+}
+.my-closing-btn p {
+    font-size: 2em!important;
+    line-height: 2em;
+}
+.modal-content ul {
+    list-style-type: none;
+    font-size: 1em;
+}
+.animated {
+    background-color: #ff4148 !important;
+}
+.modal-content table tr, .modal-content table td {
+    text-align: center;
+    border: 0px solid transparent!important;
+}
+.modal-content label, .modal-content p {
+    font-size: 0.8em!important;
+}
+.modal-content label {
+    width: 100%!important;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+.brd-top {
+    border-top: 1px solid #fff;
 }

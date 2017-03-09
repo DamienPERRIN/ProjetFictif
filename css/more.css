@@ -30,7 +30,6 @@ h1{
     color: #c74a4f!important;
     font-family: 'rubikbold', sans-serif;
 }
-
 .navbar-default {
     background-color: transparent!important;
     border-color: transparent!important;;
@@ -80,7 +79,6 @@ h1{
     cursor: pointer;
     transition: background 0.3s;
 }
-
 .c-hamburger:focus {
     outline: none;
 }
@@ -93,7 +91,6 @@ h1{
     height: 8px;
     background: white;
 }
-
 .c-hamburger span::before,
 .c-hamburger span::after {
     position: absolute;
@@ -104,11 +101,9 @@ h1{
     background-color: #fff;
     content: "";
 }
-
 .c-hamburger span::before {
     top: -20px;
 }
-
 .c-hamburger span::after {
     bottom: -20px;
 }
@@ -116,49 +111,39 @@ h1{
 .c-hamburger--htx {
     background-color: #c74a4f;
 }
-
 .c-hamburger--htx span {
     transition: background 0s 0.3s;
 }
-
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
 }
-
 .c-hamburger--htx span::before {
     transition-property: top, transform;
 }
-
 .c-hamburger--htx span::after {
     transition-property: bottom, transform;
 }
-
 /* active state, i.e. menu open */
 .c-hamburger--htx.is-active {
     background-color: #c74a4f;
 }
-
 .c-hamburger--htx.is-active span {
     background: none;
 }
-
 .c-hamburger--htx.is-active span::before {
     top: 0;
     transform: rotate(45deg);
 }
-
 .c-hamburger--htx.is-active span::after {
     bottom: 0;
     transform: rotate(-45deg);
 }
-
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
     transition-delay: 0s, 0.3s;
 }
-
 .navbar-default {
     background-color: transparent!important;
     border-color: transparent!important;;
