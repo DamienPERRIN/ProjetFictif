@@ -100,7 +100,7 @@ footer a:hover {
     width: 100px;
 }
 #info-block {
-    width: 320px;
+    width: 275px;
     margin: 0 auto;
 }
 #nav-container {
@@ -183,4 +183,11 @@ legend {
     text-align: center;
     cursor:pointer;
     color:#fff;
+}
+
+/* ---------- MORE ---------- */
+
+#restaurants caption h3 {
+    font-size: 2em;
+    text-decoration: underline!important;
 }

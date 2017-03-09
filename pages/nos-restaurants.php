@@ -1,10 +1,12 @@
 <?php
     require('src/log.bdd.php');
+
     $mysqli = getConnection();
 
-    $sql    = "SELECT * FROM restaurant JOIN horaire";
+    $sql    = "SELECT * FROM restaurant INNER JOIN horaire";
     $data   = execSql($mysqli, $sql);
 ?>
+
 <div id="restaurants" class="container">
     <div class="row">
         <div class="col-sm-10 col-md-10">
@@ -31,7 +33,7 @@
                         CLOSE
                     </div>
 
-                    <div class="modal-content">
+                    <div class="modal-content">e
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-2">
                             <h3>Information</h3>
                             <ul>
