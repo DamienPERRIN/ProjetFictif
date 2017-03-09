@@ -20,3 +20,8 @@ h1{
     color: #c74a4f!important;
     font-family: 'rubikbold';
 }
+
+.navbar-default {
+    background-color: transparent!important;
+    border-color: transparent!important;;
+}

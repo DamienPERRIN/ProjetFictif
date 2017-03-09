@@ -11,6 +11,9 @@
     #my-header {
         width: 100%!important;
     }
+    .modal-contact-part p label {
+        width: 100%!important;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 769px) {
@@ -24,6 +27,9 @@
         margin-bottom: 0.5em;
     }
     #my-header {
+        width: 100%!important;
+    }
+    .modal-contact-part p label {
         width: 100%!important;
     }
 }
