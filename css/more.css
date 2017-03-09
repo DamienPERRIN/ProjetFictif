@@ -1,6 +1,7 @@
 .active{
     background-color: #c74a4f;
     font-weight: bold;
+    text-decoration-color: #ffffff;
     border-radius: 10px;
     margin-left: 20px;
     padding-right: 10px!important;
@@ -38,7 +39,7 @@ h1{
     background-color: transparent!important;
     border-color: transparent!important;;
 }
-a:hover{
+.navbar-default a:hover{
     color: #1b1b1b!important;
 }
 .offers-list{
@@ -160,4 +161,9 @@ a:hover{
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
     transition-delay: 0s, 0.3s;
+}
+
+.navbar-default {
+    background-color: transparent!important;
+    border-color: transparent!important;;
 }

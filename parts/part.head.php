@@ -17,3 +17,7 @@
 
 <!--Import slider-->
 <link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/unslider.css" />
+
+<!--Import popup-->
+<link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/animate.min.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo ($path_to_site); ?>/css/normalize.min.css" />

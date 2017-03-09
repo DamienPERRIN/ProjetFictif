@@ -33,3 +33,16 @@
         }
     })();
 </script>
+
+<!--Import modal-->
+<script type="text/javascript" src="<?php echo ($path_to_site); ?>/js/animatedModal.min.js"></script>
+<script>
+    for (var i=1; i <= 9; i++){
+        $("#animateModal-"+i).animatedModal({
+            modalTarget:'modal-'+i,
+            animatedIn:'lightSpeedIn',
+            animatedOut:'bounceOutDown'
+        });
+    }
+</script>
+
