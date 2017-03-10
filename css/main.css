@@ -221,6 +221,9 @@ legend {
 .brd-top {
     border-top: 1px solid #fff;
 }
+.text-under{
+    text-decoration: underline;
+}
 .active{
     background-color: #c74a4f;
     font-weight: bold;
@@ -229,9 +232,9 @@ legend {
     margin-left: 20px;
     padding-right: 10px!important;
     padding-left: 10px!important;
-    float: right!important;
     line-height: 1.35;
-    width: 139px!important;
+    min-width: 139px!important;
+    float: right!important;
 }
 .col-xs-8 .col-sm-8 .col-md-8 .col-lg-8 h1{
     width: 70% !important;
@@ -278,6 +281,7 @@ h1{
 
 }
 .presentation{
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     width:100%;
     height:100%;
@@ -285,6 +289,19 @@ h1{
     padding-right:10%;
     padding-top:30px;
     text-align: justify;
+}
+.presentation-2{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width:100%;
+    height:100%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:30px;
+    text-align: justify;
+}
+.presentation h2 {
+    font-size: 2em;
 }
 /*burger button*/
 .c-hamburger {
@@ -374,4 +391,7 @@ h1{
 .navbar-default {
     background-color: transparent!important;
     border-color: transparent!important;;
+}
+.dropdown-menu {
+    min-width: 100%!important;
 }

@@ -34,7 +34,8 @@
                     </div>
 
                     <div class="modal-content">
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-2">
+                        <h2 class="text-center"><?php echo $record['titre']; ?></h2>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2">
                             <h3 class="text-center">Informations</h3>
                             <ul>
                                 <li><label><span class="glyphicon glyphicon-asterisk"></span> Adresse</label><?php echo $record['adresse']; ?></li>
@@ -43,7 +44,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                             <h3 class="text-center">Horaires</h3>
                             <table class="table">
                                 <tbody>

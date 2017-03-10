@@ -14,7 +14,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="fr-ca">
+<html lang="fr">
 <head>
     <!--HEAD import from parts-->
     <?php include('parts/part.head.php'); ?>

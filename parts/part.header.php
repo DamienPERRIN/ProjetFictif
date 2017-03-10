@@ -66,14 +66,13 @@
                            echo('active-link');
                        } ?>">Recrutement</a>
                 </li>
+                <li class="">
+                    <a href="?page=devenir-franchise" class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
+                        echo('active-link');
+                    } ?>">Devenir franchisé ?</a>
+                </li>
             </ul>
         </ul>
-        <div class="active col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <a href="?page=devenir-franchise"
-               class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
-                   echo('active-link');
-               } ?>">Devenir franchisé ?</a>
-        </div>
     </div>
 </div>
 
