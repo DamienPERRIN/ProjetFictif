@@ -1,35 +1,78 @@
-<div id="my-header" class="page-header container-fluid">
-    <div class="row">
-        <div id="my-title" class="col-xs-12 col-sm-12 col-md-1 col-lg-2 pull-left">
-            <h1>L'atypique</h1>
+<div id="header" class="container navbar navbar-default sb-slide affix-top" role="banner">
+    <div class="navbar-header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div id="bloc_page">
+                    <img src="img/cerf.png" href="#L'univers-Atypique" alt="Logo" id="logo"/>
+                </div>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <h1>LES RESTAURANTS ATYPIQUES</h1>
+            </div>
         </div>
-
-        <div id="my-header-nav" class="">
-            <nav id="my-menu-1" class="pull-right hidden-xs hidden-sm">
-                <ul class="my-nav-list">
-                    <li><a href="?page=index" class="hvr-sweep-to-right <?php if($_GET['page']==='index'){echo ('active-link');} ?>">
-                            <span class="glyphicon glyphicon-home"></span>Accueil</a>
+        <div class="row hidden-xs hidden-sm ">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <ul class="navbar-nav nav">
+                    <li class="">
+                        <a href="?page=index" class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'index') {
+                            echo('active-link');
+                        } ?>">L'univers Atypique</a>
                     </li>
-                    <li><a href="?page=qui-sommes-nous" class="hvr-sweep-to-right <?php if($_GET['page']==='qui-sommes-nous'){echo ('active-link');} ?>">
-                            <span class="glyphicon glyphicon-user"></span>Qui sommes nous ?</a>
+                    <li class="">
+                        <a href="?page=nos-restaurants"
+                           class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'nos-restaurants') {
+                               echo('active-link');
+                           } ?>">Nos restaurants</a>
                     </li>
-                    <li><a href="?page=nos-restaurants" class="hvr-sweep-to-right <?php if($_GET['page']==='nos-restaurants'){echo ('active-link');} ?>">
-                            <span class="glyphicon glyphicon-flag"></span>Nos restaurants</a>
-                    </li>
-                    <li><a href="?page=devenir-franchise" class="hvr-sweep-to-right <?php if($_GET['page']==='devenir-franchise'){echo ('active-link');} ?>">
-                            <span class="glyphicon glyphicon-user"></span>Devenir franchisé ?</a>
+                    <li class="">
+                        <a href="?page=recrutement"
+                           class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'recrutement') {
+                               echo('active-link');
+                           } ?>">Recrutement</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
+            <div class="active col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <a href="?page=devenir-franchise"
+                   class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
+                       echo('active-link');
+                   } ?>">Devenir franchisé ?</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown hidden-md hidden-lg dropdown-menu-right">
+        <button id="dLabel" class="navbar-text navbar-right c-hamburger c-hamburger--htx" type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>toggle menu</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
 
-            <nav id="my-menu-2" class="hidden-lg hidden-md">
-                <ul class="my-nav-list">
-                    <li class=""><a href="#" class="hvr-sweep-to-left"><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li class=""><a href="#" class="hvr-sweep-to-left"><span class="glyphicon glyphicon-user"></span></a></li>
-                    <li class=""><a href="#" class="hvr-sweep-to-left"><span class="glyphicon glyphicon-flag"></span></a></li>
-                    <li class=""><a href="#" class="hvr-sweep-to-left"><span class="glyphicon glyphicon-user"></span></a></li>
-                </ul>
-            </nav>
-        </div><!--end header nav-->
-    </div><!--end row-->
+            <ul class="navbar-nav nav">
+
+                <li class="">
+                    <a href="?page=index" class="<?php if (!isset($_GET['page']) OR $_GET['page'] === 'index') {
+                        echo('active-link');
+                    } ?>">L'univers Atypique</a>
+                </li>
+                <li class="">
+                    <a href="?page=nos-restaurants"
+                       class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'nos-restaurants') {
+                           echo('active-link');
+                       } ?>">Nos restaurants</a>
+                </li>
+                <li class="">
+                    <a href="?page=recrutement"
+                       class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'recrutement') {
+                           echo('active-link');
+                       } ?>">Recrutement</a>
+                </li>
+                <li class="">
+                    <a href="?page=devenir-franchise" class="<?php if (isset($_GET['page']) AND $_GET['page'] === 'devenir-franchise') {
+                        echo('active-link');
+                    } ?>">Devenir franchisé ?</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
 </div>
+

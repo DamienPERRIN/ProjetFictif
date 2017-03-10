@@ -1,6 +1,6 @@
 <div class="container-fluid cont-1">
 
-    <legend class="brd-all text-center">Vous souhaitez nous rejoindre ?¿</legend>
+    <legend class="brd-all text-center"></legend>
 
     <div class="row">
         <div class="col-xs-12 col-lg-1"></div>

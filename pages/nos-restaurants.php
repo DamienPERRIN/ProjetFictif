@@ -1,242 +1,69 @@
+<?php
+    require('src/log.bdd.php');
+
+    $mysqli = getConnection();
+
+    $sql    = "SELECT * FROM restaurant r INNER JOIN horaire h ON r.id = h.id";
+    $data   = execSql($mysqli, $sql);
+?>
+
 <div id="restaurants" class="container">
     <div class="row">
         <div class="col-sm-10 col-md-10">
             <h2>Nos restaurants</h2>
         </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div id="resto1" class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant1.jpeg" alt="Photo du restaurant La piste Noire">
-                <div class="caption">
-                    <h3>La piste Noire</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-1" class="btn btn-default popup-trigger">En savoir plus</a></p>
+        <?php
+            $loop = 0;
+            foreach ($data as $record):
+        ?>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div id="resto-<?php echo $record['id']; ?>" class="thumbnail">
+                    <img src="<?php echo ($path_to_site)?>/img/restaurants/restaurant<?php echo $record['id'] . ".jpeg"; ?>"
+                         alt="Photo du restaurant <?php echo $record['titre']; ?>">
+                    <div class="caption">
+                        <h3><?php echo $record['titre']; ?></h3>
+                        <p><?php echo $record['texte']; ?></p>
+                        <p><a id="animateModal-<?php echo $record['id']; ?>" href="#modal-<?php echo $record['id']; ?>" class="myModal">En savoir plus</a></p>
+                    </div>
                 </div>
-            </div>
-        </div> <!--end block 1-->
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div id="resto2" class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant2.jpeg" alt="Photo du restaurant V-i">
-                <div class="caption">
-                    <h3>V-i</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-2" class="btn btn-default popup-trigger">En savoir plus</a></p>
+                <div id="modal-<?php echo $record['id']; ?>">
+                    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                    <div id="btn-close-modal" class="my-closing-btn close-modal-<?php echo $record['id']; ?>">
+                        <p>FERMER</p>
+                    </div>
+
+                    <div class="modal-content">
+                        <h2 class="text-center"><?php echo $record['titre']; ?></h2>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-2">
+                            <h3 class="text-center">Informations</h3>
+                            <ul>
+                                <li><label><span class="glyphicon glyphicon-asterisk"></span> Adresse</label><?php echo $record['adresse']; ?></li>
+                                <li><label class="brd-top"><span class="glyphicon glyphicon-asterisk"></span> Téléphone</label><?php echo $record['telephone']; ?></li>
+                                <li><label class="brd-top"><span class="glyphicon glyphicon-asterisk"></span>   Email</label><?php echo $record['email']; ?></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <h3 class="text-center">Horaires</h3>
+                            <table class="table">
+                                <tbody>
+                                <tr><td>Lundi</td><td><?php echo $record['lundi']; ?></td></tr>
+                                <tr><td>Mardi</td><td><?php echo $record['mardi']; ?></td></tr>
+                                <tr><td>Mercredi</td><td><?php echo $record['mercredi']; ?></td></tr>
+                                <tr><td>Jeudi</td><td><?php echo $record['jeudi']; ?></td></tr>
+                                <tr><td>Vendredi</td><td><?php echo $record['vendredi']; ?></td></tr>
+                                <tr><td>Samedi</td><td><?php echo $record['samedi']; ?></td></tr>
+                                <tr><td>Dimanche</td><td><?php echo $record['dimanche']; ?></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div> <!--end block 2-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div id="resto3" class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant3.jpeg" alt="Photo du restaurants L'étoile Blanche">
-                <div class="caption">
-                    <h3>L'étoile blanche</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-3" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 3-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant4.jpeg" alt="Photo du restaurant Sphérique">
-                <div class="caption">
-                    <h3>Sphérique</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-4" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 4-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant5.jpeg" alt="Photo du restaurant Blathazar">
-                <div class="caption">
-                    <h3>Balthazar</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-5" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 5-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant6.jpeg" alt="Photo du restaurant Flowers">
-                <div class="caption">
-                    <h3>Flowers</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-6" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 6-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant7.jpeg" alt="Photo du restaurant C.R.Y.S.T.A.L">
-                <div class="caption">
-                    <h3>C.R.Y.S.T.A.L</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-7" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 7-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant8.jpeg" alt="Photo du restaurant Le Basique">
-                <div class="caption">
-                    <h3>Le basique</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-8" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 8-->
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="thumbnail">
-                <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant9.jpeg" alt="Photo du restaurant UnderCity">
-                <div class="caption">
-                    <h3>UnderCity</h3>
-                    <p>
-                        Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis,
-                        quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat
-                        a militibus obscurissimis.
-                    </p>
-                    <p><a id="pop-9" class="btn btn-default popup-trigger">En savoir plus</a></p>
-                </div>
-            </div>
-        </div> <!--end block 9-->
-
-        <!--  ########## POPUP part ########## -->
-        <div id="popup-1" class="popup">
-            <div class="close-popup"></div>
-            <h3>La piste Noire</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant1.jpeg" alt="Photo du restaurant La Piste Noire">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-2" class="popup">
-            <div class="close-popup"></div>
-            <h3>V-i</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant2.jpeg" alt="Photo du restaurant V-i">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-3" class="popup">
-            <div class="close-popup"></div>
-            <h3>L'étoile blanche</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant3.jpeg" alt="Photo du restaurant L'étoile blanche">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-4" class="popup">
-            <div class="close-popup"></div>
-            <h3>Sphérique</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant4.jpeg" alt="Photo du restaurant Sphérique">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-5" class="popup">
-            <div class="close-popup"></div>
-            <h3>Balthazar</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant5.jpeg" alt="Photo du restaurant Balthazar">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-6" class="popup">
-            <div class="close-popup"></div>
-            <h3>Flowers</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant6.jpeg" alt="Photo du restaurant La Piste Noir">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-7" class="popup">
-            <div class="close-popup"></div>
-            <h3>C.R.Y.S.T.A.L</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant7.jpeg" alt="Photo du restaurant C.R.Y.S.T.A.L">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-8" class="popup">
-            <div class="close-popup"></div>
-            <h3>Le basique</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant8.jpeg" alt="Photo du restaurant Le basique">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
-
-        <div id="popup-9" class="popup">
-            <div class="close-popup"></div>
-            <h3>UnderCity</h3>
-            <img src="<?php echo ($path_to_site); ?>/img/restaurants/restaurant9.jpeg" alt="Photo du restaurant UnderCity">
-            <p>
-                Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut
-                poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis.
-            </p>
-            <span class="popup-btn-close"><span class="glyphicon glyphicon-remove"></span></span>
-        </div>
+            </div> <!--end block-->
+        <?php
+            $loop++;
+            endforeach;
+        ?>
     </div>
 </div>

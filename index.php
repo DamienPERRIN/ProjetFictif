@@ -4,6 +4,8 @@
 
     if ( $page === 'qui-sommes-nous'
     OR $page === 'devenir-franchise'
+    OR $page === 'recrutement'
+    OR $page === 'proprietaire'
     OR $page === 'nos-restaurants') {
         $page = $page . '.php';
     } else {
@@ -12,7 +14,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="fr-ca">
+<html lang="fr">
 <head>
     <!--HEAD import from parts-->
     <?php include('parts/part.head.php'); ?>
@@ -25,7 +27,7 @@
 </header>
 
 <main>
-    <?php include ('/pages/' . $page); ?>
+    <?php include('pages/' . $page); ?>
 </main>
 
 <footer>
